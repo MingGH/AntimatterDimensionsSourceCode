@@ -91,11 +91,11 @@ export default {
     },
     challengeDisplay() {
       if (this.inPelle && this.activeChallengeNames.length > 0) {
-        return `${this.activeChallengeNames.join(" + ")} in a Doomed Reality. Good luck.`;
+        return `${this.activeChallengeNames.join(" + ")} 于毁灭现实中。祝你好运。`;
       }
-      if (this.inPelle) return "a Doomed Reality. Good luck.";
+      if (this.inPelle) return "毁灭现实。祝你好运。";
       if (this.activeChallengeNames.length === 0) {
-        return "the Antimatter Universe (no active challenges)";
+        return "反物质宇宙 (无活跃挑战)";
       }
       return this.activeChallengeNames.join(" + ");
     },

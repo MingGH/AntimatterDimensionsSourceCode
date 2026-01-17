@@ -92,7 +92,7 @@ export default {
     :autobuyer="autobuyer"
     :show-interval="!postBreak"
     :is-modal="isModal"
-    name="Automatic Big Crunch"
+    name="自动大坍缩"
   >
     <template
       v-if="!hasMaxedInterval"
@@ -149,7 +149,7 @@ export default {
           type="checkbox"
           class="o-clickable"
         >
-        Dynamic amount
+        动态数量
       </label>
     </template>
   </AutobuyerBox>

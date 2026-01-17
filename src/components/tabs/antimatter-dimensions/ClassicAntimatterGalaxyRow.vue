@@ -39,11 +39,11 @@ export default {
     buttonText() {
       if (this.lockText !== null) return this.lockText;
       const reset = [];
-      if (!Achievement(111).isUnlocked) reset.push("Dimensions");
-      if (!Achievement(143).isUnlocked) reset.push("Dimension Boosts");
+      if (!Achievement(111).isUnlocked) reset.push("维度");
+      if (!Achievement(143).isUnlocked) reset.push("维度提升");
       return reset.length === 0
-        ? `Increase the power of Tickspeed upgrades`
-        : `Reset your ${makeEnumeration(reset)} to increase the power of Tickspeed upgrades`;
+        ? `增强 Tick 速度升级的效果`
+        : `重置你的 ${makeEnumeration(reset)} 以增强 Tick 速度升级的效果`;
     },
     sumText() {
       const parts = [Math.max(this.galaxies.normal, 0)];
@@ -57,9 +57,9 @@ export default {
     },
     typeName() {
       switch (this.type) {
-        case GALAXY_TYPE.NORMAL: return "Antimatter Galaxies";
-        case GALAXY_TYPE.DISTANT: return "Distant Antimatter Galaxies";
-        case GALAXY_TYPE.REMOTE: return "Remote Antimatter Galaxies";
+        case GALAXY_TYPE.NORMAL: return "反物质星系";
+        case GALAXY_TYPE.DISTANT: return "遥远反物质星系";
+        case GALAXY_TYPE.REMOTE: return "超远反物质星系";
       }
       return undefined;
     },
@@ -69,14 +69,14 @@ export default {
     costScalingText() {
       switch (this.type) {
         case GALAXY_TYPE.DISTANT:
-          return `Each Galaxy is more expensive past ${quantifyInt("Galaxy", this.distantStart)}`;
+          return `在 ${quantifyInt("个星系", this.distantStart)} 之后，每个星系都会变得更昂贵`;
         case GALAXY_TYPE.REMOTE: {
           const scalings = [
-            { type: "distant", function: "quadratic", amount: this.distantStart },
-            { type: "remote", function: "exponential", amount: this.remoteStart }
+            { type: "遥远", function: "二次", amount: this.distantStart },
+            { type: "超远", function: "指数", amount: this.remoteStart }
           ];
-          return `Increased Galaxy cost scaling: ${scalings.sort((a, b) => a.amount - b.amount)
-            .map(scaling => `${scaling.function} scaling past ${this.formatGalaxies(scaling.amount)} (${scaling.type})`)
+          return `星系成本增长：${scalings.sort((a, b) => a.amount - b.amount)
+            .map(scaling => `${this.formatGalaxies(scaling.amount)} (${scaling.type}) 后呈 ${scaling.function} 增长`)
             .join(", ").capitalize()}`;
         }
       }
@@ -124,7 +124,7 @@ export default {
       class="l-dim-row__prestige-text c-dim-row__label c-dim-row__label--amount l-text-wrapper"
     >
       {{ typeName }} ({{ sumText }}):
-      requires {{ formatInt(requirement.amount) }} {{ dimName }} Dimensions
+      需要 {{ formatInt(requirement.amount) }} 个 {{ dimName }} 维度
       <div class="l-scaling-text-wrapper">
         {{ hasIncreasedScaling ? costScalingText : "" }}
       </div>

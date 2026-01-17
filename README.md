@@ -1,25 +1,19 @@
-# Antimatter Dimensions
+# 反物质维度 (Antimatter Dimensions)
 
-## Run
+## 运行
 
-To run the game locally, you will need to install
-[Node.js](https://nodejs.org/) (LTS suggested).
+要在本地运行游戏，你需要安装 [Node.js](https://nodejs.org/)（建议使用 LTS 版本）。
 
-First, run the following command in your terminal (or command line) while being
-inside the checked out repository:
+首先，在检出的仓库目录下的终端（或命令行）中运行以下命令：
 
 ```
 npm ci
 ```
 
-After all the packages are installed, start up the game:
+所有包安装完成后，启动游戏：
 
 ```
 npm run serve
 ```
 
-This will make the game served via your localhost, and the playable link will
-be displayed in your terminal. The server **doesn't** need to be restarted
-after you've made changes - just reload the page. The server **can**
-occasionally crash, so check your terminal from time to time and run `serve`
-again if needed.
+这将通过你的 localhost 提供游戏服务，可游玩的链接将显示在你的终端中。在你做出更改后**不需要**重启服务器——只需刷新页面即可。服务器**可能**偶尔会崩溃，所以请不时检查你的终端，并在需要时再次运行 `serve`。

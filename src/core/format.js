@@ -148,13 +148,14 @@ const pluralDatabase = new Map([
 window.pluralize = function pluralize(word, amount, plural) {
   if (word === undefined || amount === undefined) throw "Arguments must be defined";
 
-  if (isSingular(amount)) return word;
-  const existingPlural = plural ?? pluralDatabase.get(word);
-  if (existingPlural !== undefined) return existingPlural;
+  return word;
+  // if (isSingular(amount)) return word;
+  // const existingPlural = plural ?? pluralDatabase.get(word);
+  // if (existingPlural !== undefined) return existingPlural;
 
-  const newWord = generatePlural(word);
-  pluralDatabase.set(word, newWord);
-  return newWord;
+  // const newWord = generatePlural(word);
+  // pluralDatabase.set(word, newWord);
+  // return newWord;
 };
 
 /**

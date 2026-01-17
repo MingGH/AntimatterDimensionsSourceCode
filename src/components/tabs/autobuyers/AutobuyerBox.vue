@@ -83,7 +83,7 @@ export default {
     },
     showEternity() {
       return PlayerProgress.eternityUnlocked()
-        ? "this Eternity"
+        ? "（本次永恒）"
         : "";
     },
     isShowingStateInfo() {
@@ -95,11 +95,11 @@ export default {
       switch (this.currMode) {
         case AUTO_ETERNITY_MODE.TIME:
           return this.nextTime > 0
-            ? `Will trigger in ${TimeSpan.fromSeconds(this.nextTime).toStringShort()}`
-            : "Will trigger ASAP";
+            ? `将在 ${TimeSpan.fromSeconds(this.nextTime).toStringShort()} 后触发`
+            : "将尽快触发";
         case AUTO_ETERNITY_MODE.X_HIGHEST:
         default:
-          return `Will trigger at ${format(this.nextValue, 2)} ${this.autobuyer.name === "Infinity" ? "IP" : "EP"}`;
+          return `将在 ${format(this.nextValue, 2)} ${this.autobuyer.name === "Infinity" ? "IP" : "EP"} 时触发`;
       }
     }
   },
@@ -188,7 +188,7 @@ export default {
   >
     {{ name }}
     <br>
-    Requirement: {{ format(antimatterCost) }} Total Antimatter {{ showEternity }}
+    要求: {{ format(antimatterCost) }} 总反物质 {{ showEternity }}
   </div>
 </template>
 

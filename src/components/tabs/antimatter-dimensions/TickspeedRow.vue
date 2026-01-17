@@ -27,22 +27,22 @@ export default {
       };
     },
     multiplierDisplay() {
-      if (InfinityChallenge(3).isRunning) return `Multiply all Antimatter Dimensions by
+      if (InfinityChallenge(3).isRunning) return `将所有反物质维度乘以
         ${formatX(1.05 + this.galaxyCount * 0.005, 3, 3)}`;
       const tickmult = this.mult;
-      return `${formatX(tickmult.reciprocal(), 2, 3)} faster / upgrade.`;
+      return `${formatX(tickmult.reciprocal(), 2, 3)} 更快 / 升级`;
     },
     tickspeedDisplay() {
-      return `Tickspeed: ${format(this.tickspeed, 2, 3)} / sec`;
+      return `Tick 速度: ${format(this.tickspeed, 2, 3)} / 秒`;
     },
     continuumString() {
       return formatFloat(this.continuumValue, 2);
     },
     upgradeCount() {
       const purchased = this.purchasedTickspeed;
-      if (!this.freeTickspeed) return quantifyInt("Purchased Upgrade", purchased);
-      if (purchased === 0 || this.isContinuumActive) return `${formatInt(this.freeTickspeed)} Free Upgrades`;
-      return `${formatInt(purchased)} Purchased + ${formatInt(this.freeTickspeed)} Free`;
+      if (!this.freeTickspeed) return quantifyInt("次购买", purchased);
+      if (purchased === 0 || this.isContinuumActive) return `${formatInt(this.freeTickspeed)} 次免费升级`;
+      return `${formatInt(purchased)} 次购买 + ${formatInt(this.freeTickspeed)} 次免费`;
     }
   },
   methods: {
@@ -85,13 +85,13 @@ export default {
         onclick="buyTickSpeed()"
       >
         <span v-if="isContinuumActive">
-          Tickspeed Continuum: {{ continuumString }}
+          Tick 速度连续体: {{ continuumString }}
         </span>
         <span v-else-if="isEC9">
-          Tickspeed Unpurchasable (EC 9)
+          Tick 速度无法购买 (EC 9)
         </span>
         <span v-else>
-          Tickspeed Cost: {{ format(cost) }}
+          Tick 速度花费: {{ format(cost) }}
         </span>
         <div
           v-if="hasTutorial"

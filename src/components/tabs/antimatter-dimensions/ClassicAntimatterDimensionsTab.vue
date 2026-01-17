@@ -38,9 +38,9 @@ export default {
       this.currentSacrifice.copyFrom(Sacrifice.totalBoost);
       this.hasRealityButton = PlayerProgress.realityUnlocked() || TimeStudy.reality.isBought;
       const sacText = this.isSacrificeUnlocked
-        ? ` | Dimensional Sacrifice multiplier: ${formatX(this.currentSacrifice, 2, 2)}`
+        ? ` | 维度献祭倍率：${formatX(this.currentSacrifice, 2, 2)}`
         : "";
-      this.multiplierText = `Buy 10 Dimension purchase multiplier: ${formatX(this.buy10Mult, 2, 2)}${sacText}`;
+      this.multiplierText = `购买 10 维度的倍率：${formatX(this.buy10Mult, 2, 2)}${sacText}`;
     },
     quickReset() {
       softReset(-1, true, true);
@@ -68,9 +68,9 @@ export default {
       class="o-primary-btn--quick-reset"
       @click="quickReset"
     >
-      Perform a Dimension Boost reset
-      <span v-if="hasDimensionBoosts"> but lose a Dimension Boost</span>
-      <span v-else> for no gain</span>
+      执行维度提升重置
+      <span v-if="hasDimensionBoosts"> 但失去一个维度提升</span>
+      <span v-else> 且无增益</span>
     </PrimaryButton>
     <div class="l-flex" />
     <AntimatterDimensionProgressBar class="l-antimatter-dim-tab__progress_bar" />

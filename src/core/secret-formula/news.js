@@ -14,77 +14,77 @@ function newsAnimSpd(seconds) {
 export const news = [
   {
     id: "a1",
-    text: "The cookie is a lie.",
+    text: "饼干是谎言。",
   },
   {
     id: "a2",
-    text: "Antimatter ghosts do not exist. Just like matter ghosts. They don't have any matter, for that matter."
+    text: "反物质幽灵并不存在。就像物质幽灵一样。就此而言，它们没有任何物质。"
   },
   {
     id: "a3",
-    text: "Nuclear power plants have been abandoned in favor of antimatter power."
+    text: "核电站已被废弃，取而代之的是反物质发电。"
   },
   {
     id: "a4",
-    text: "Antimatter cookies have been confirmed to not exist, whoever claims that, stop."
+    text: "已确认反物质饼干不存在，无论谁声称，请停止。"
   },
   {
     id: "a5",
-    text: "Antimatter prices have drastically dropped due to newfound abundance."
+    text: "由于新发现的丰富度，反物质价格急剧下降。"
   },
   {
     id: "a6",
-    text: "In the news today, humans make an antimatter animal sacrifice to the antimatter god."
+    text: "在今天的新闻中，人类向反物质之神献祭了反物质动物。"
   },
   {
     id: "a7",
-    text: "You made one antimatter! Whatever that means."
+    text: "你制造了一个反物质！不管那意味着什么。"
   },
   {
     id: "a8",
-    text: "\"IN THE END, IT DOESN'T ANTIMATTER\" -hevipelle"
+    text: "\"到最后，这并不重要 (ANTIMATTER)\" -hevipelle"
   },
   {
     id: "a9",
-    text: "None of this matters."
+    text: "这些都不重要。"
   },
   {
     id: "a10",
-    text: "How does it matter if it's antimatter?"
+    text: "如果是反物质有什么关系？"
   },
   {
     id: "a11",
-    text: "Scientists confirm that the colour of antimatter is Blurple."
+    text: "科学家证实反物质的颜色是蓝紫色。"
   },
   {
     id: "a12",
-    text: "How does NASA organise a party? They planet."
+    text: "NASA 如何组织聚会？他们计划 (Planet)。"
   },
   {
     id: "a13",
     text:
-      `Electrons are now seeing the happy things in life.
-      We're calling these happy electrons 'Positrons.' Wait, that's taken?`
+      `电子现在看到了生活中的快乐事物。
+      我们将这些快乐的电子称为“正电子”。等等，那个名字被占用了？`
   },
   {
     id: "a14",
     text:
-      `This completely useless sentence will get you nowhere and you know it.
-      What a horrible obnoxious man would come up with it, he will probably go to hell,
-      and why would the developer even implement it? Even if you kept reading it you wouldn't
-      be able to finish it (the first time).`
+      `这个完全无用的句子不会让你有任何进展，你知道的。
+      多么可怕讨厌的人会想出这个，他可能会下地狱，
+      为什么开发者甚至会实现它？即使你继续读下去，你也无法
+      完成它（第一次）。`
   },
   {
     id: "a15",
-    text: `"GHOST SAYS HELLO" -Boo-chan`
+    text: `"鬼魂说你好" -Boo-chan`
   },
   {
     id: "a16",
-    text: `"Can someone tell hevi to calm down?" -Mee6`
+    text: `"谁能告诉 hevi 冷静点？" -Mee6`
   },
   {
     id: "a17",
-    text: "Due to antimatter messing with physics, a creature that was once a moose is now a human."
+    text: "由于反物质干扰了物理学，一种曾经是驼鹿的生物现在变成了人类。"
   },
   {
     id: "a18",
@@ -92,31 +92,31 @@ export const news = [
   },
   {
     id: "a19",
-    text: `"Alright" -Alright`
+    text: `"好的" -Alright`
   },
   {
     id: "a20",
-    text: "The English greeting is not present in Antimatter speak."
+    text: "英语问候语在反物质语言中不存在。"
   },
   {
     id: "a21",
-    text: "To buy max or not to buy max, that is the question."
+    text: "买最大还是不买最大，这是一个问题。"
   },
   {
     id: "a22",
-    text: "One, two, skip a few, ninety-nine, NaN!"
+    text: "一，二，跳过几个，九十九，NaN！"
   },
   {
     id: "a23",
-    text: "No, mom, I can't pause this game."
+    text: "不，妈妈，我不能暂停这个游戏。"
   },
   {
     id: "a24",
-    text: "Scientific notation has entered the battlefield."
+    text: "科学记数法已进入战场。"
   },
   {
     id: "a25",
-    text: `"Make the Universe Great Again!" -Tronald Dump`
+    text: `"让宇宙再次伟大！" -Tronald Dump`
   },
   {
     id: "a26",
@@ -125,287 +125,287 @@ export const news = [
   {
     id: "a27",
     get text() {
-      return `A new religion has been created, and it's spreading like wildfire. The believers of this religion worship
-        the Heavenly Pelle, the goddess of antimatter. They also believe that ${format(Number.MAX_VALUE, 2)}
-        is infinite.`;
+      return `一个新的宗教已经被创造出来，并且像野火一样蔓延。这个宗教的信徒崇拜
+        神圣的佩尔，反物质女神。他们还相信 ${format(Number.MAX_VALUE, 2)}
+        是无限的。`;
     }
   },
   {
     id: "a28",
-    text: "Someone has just touched a blob, and blown up. Was the blob antimatter, or was the guy made of Explodium?"
+    text: "有人刚刚碰了一个 blob，然后爆炸了。那个 blob 是反物质，还是那个人是用爆炸物做的？"
   },
   {
     id: "a29",
-    text: `If you are not playing on Kongregate, Steam, or https://ivark.github.io/AntimatterDimensions/,
-      the site is bootleg.`
+    text: `如果你不是在 Kongregate, Steam, 或 https://ivark.github.io/AntimatterDimensions/ 上玩，
+      那么这个网站是盗版。`
   },
   {
     id: "a30",
-    text: "Rate 5 on Kongregate so more people can experience this 5 star rating."
+    text: "在 Kongregate 上评分 5 星，这样更多的人可以体验这个 5 星评分。"
   },
   {
     id: "a31",
-    text: "BOO!"
+    text: "嘘！"
   },
   {
     id: "a32",
-    text: `"You ate for too long." -Hevipelle`
+    text: `"你吃得太久了。" -Hevipelle`
   },
   {
     id: "a33",
-    text: `"I hate myself." -Boo-chan`
+    text: `"我讨厌我自己。" -Boo-chan`
   },
   {
     id: "a34",
-    text: `"Gee golly" -Xandawesome`
+    text: `"哎呀" -Xandawesome`
   },
   {
     id: "a35",
-    text: "Above us, there is nothing above, but the stars, above."
+    text: "在我们之上，除了星星，什么都没有。"
   },
   {
     id: "a36",
-    text: "You feel like making antimatter. But nobody wants to eat your antimatter."
+    text: "你想要制造反物质。但没人想吃你的反物质。"
   },
   {
     id: "a37",
-    text: "Somebody wasn't nice, he got an antimatter-storm."
+    text: "有人不友善，他遭到了反物质风暴。"
   },
   {
     id: "a38",
-    text: "You are living, you occupy space, you have a mass, you matter... unless you antimatter."
+    text: "你活着，你占据空间，你有质量，你很重要(matter)... 除非你反物质(antimatter)。"
   },
   {
     id: "a39",
-    text: "I clicked too fast... my PC is now dematerialised."
+    text: "我点击太快了... 我的电脑现在非物质化了。"
   },
   {
     id: "a40",
     text:
-      `"If an alien lands on your front lawn and extends an appendage as a gesture of greeting, before you get
-      friendly, toss it an eightball. If the appendage explodes, then the alien was probably made of antimatter.
-      If not, then you can proceed to take it to your leader." -Neil deGrasse Tyson`
+      `"如果一个外星人降落在你的前草坪上并伸出一个附肢作为问候的手势，在你变得
+      友好之前，扔给它一个八号球。如果附肢爆炸，那么外星人可能是由反物质构成的。
+      如果没有，那么你可以继续带它去见你的领导。" -Neil deGrasse Tyson`
   },
   {
     id: "a41",
     text:
-      "There must always be an equal amount of matter as compared to antimatter; I guess your mom balances that a bit."
+      "必须总是有与反物质等量的物质；我想你妈妈稍微平衡了一下。"
   },
   {
     id: "a42",
-    text: "Nothing is created, nothing is destroyed."
+    text: "没有被创造，也没有被毁灭。"
   },
   {
     id: "a43",
-    text: "We dug a big hole to store this antimatter... Adele's rolling in it."
+    text: "我们挖了一个大洞来储存这些反物质... Adele 在里面打滚 (rolling in it)。"
   },
   {
     id: "a44",
-    text: "If everything is antimatter, how can you see yourself?"
+    text: "如果一切都是反物质，你怎么能看到你自己？"
   },
   {
     id: "a45",
-    text: "The stock markets have crashed due to antimatter beings somehow knowing what they will be tomorrow."
+    text: "由于反物质生物不知何故知道明天会是什么，股市崩盘了。"
   },
   {
     id: "a46",
-    text: "My dog ate too much antimatter, now he's' saying 'meow!'"
+    text: "我的狗吃了太多反物质，现在它在叫 '喵！'"
   },
   {
     id: "a47",
-    text: "If you put infinity into your calculator, it will result in 42!"
+    text: "如果你把无限输入你的计算器，它会得出 42！"
   },
   {
     id: "a48",
-    text: "You have found the rarest antimatter pepe, it's ultra rare!"
+    text: "你发现了最稀有的反物质佩佩，它是超稀有的！"
   },
   {
     id: "a49",
     get text() {
-      return `Can we get ${format(1e169)} likes on this video??? Smash that like button!!`;
+      return `我们能在这个视频上获得 ${format(1e169)} 个赞吗？？？猛击那个点赞按钮！！`;
     }
   },
   {
     id: "a50",
-    text: "The smell of antimatter has been revealed. It smells like kittens."
+    text: "反物质的气味已经被揭示。它闻起来像小猫。"
   },
   {
     id: "a51",
-    text: "Just another antimatter in the wall."
+    text: "只是墙上的另一块反物质 (Just another antimatter in the wall)。"
   },
   {
     id: "a52",
-    text: "GET SNIPED, WEAKLING"
+    text: "被狙击了，弱者"
   },
   {
     id: "a53",
-    text: `"Thanks a lot." -Dankesehr`
+    text: `"非常感谢。" -Dankesehr`
   },
   {
     id: "a54",
-    text: "This world situation is an SOS situation to the world!! MAYDAY, MAYDAY!!"
+    text: "这个世界局势对世界来说是一个 SOS 局势！！五月天，五月天！！"
   },
   {
     id: "a55",
     text:
-      `"As for sure as the sun rises in the west, of all the singers and
-      poets on earth, I am the bestest." - Hevipelle`
+      `"正如太阳从西边升起一样确定，在地球上所有的歌手和
+      诗人中，我是最好的。" - Hevipelle`
   },
   {
     id: "a56",
-    text: `"I'm good at using github." -Hevipelle`
+    text: `"我擅长使用 github。" -Hevipelle`
   },
   {
     id: "a57",
     text:
-      `A new chat server has been created for antimatter people to spy on matter people,
-      and the world has fallen into chaos and discord.`
+      `一个新的聊天服务器已被创建，供反物质人监视物质人，
+      世界陷入了混乱和不和。`
   },
   {
     id: "a58",
     text:
-      `A new study has come out linking the consumption of potatoes with increased risk of antimatter implosion.
-      Scientists suggest eating more.`
+      `一项新研究表明，食用土豆与反物质内爆风险增加有关。
+      科学家建议多吃点。`
   },
   {
     id: "a59",
-    text: `"I thought that I fixed that bug but apparently some update broke it again." -Hevipelle`
+    text: `"我以为我修复了那个错误，但显然有些更新又把它弄坏了。" -Hevipelle`
   },
   {
     id: "a60",
-    text: `"Maybe I'm gay then" -Bootato`
+    text: `"也许我是同性恋" -Bootato`
   },
   {
     id: "a61",
-    text: "Breaking news! Hevipelle has just announced that the buy max button is in fact going to be removed!"
+    text: "突发新闻！Hevipelle 刚刚宣布购买最大按钮实际上将被移除！"
   },
   {
     id: "a62",
-    text: "I dedicate this game to my girlfriend."
+    text: "我将这个游戏献给我的女朋友。"
   },
   {
     id: "a63",
     text:
-      `Antimatter guns don't kill antimatter people, antimatter people kill antimatter people but does that mean
-      that antimatter toaster doesn't toast antimatter toasts, antimatter toast toasts antimatter toasts?`
+      `反物质枪不杀反物质人，反物质人杀反物质人，但这是否意味着
+      反物质烤面包机不烤反物质吐司，反物质吐司烤反物质吐司？`
   },
   {
     id: "a64",
-    text: "But to an antimatter person, wouldn't they be matter and us antimatter?"
+    text: "但是对于一个反物质人来说，他们难道不是物质，而我们是反物质吗？"
   },
   {
     id: "a65",
-    text: "And nothing antimatters."
+    text: "没有任何反物质 (antimatters)。"
   },
   {
     id: "a66",
     text:
-      `School starting up strikes fear in students universe-wide, as schools are no longer segregated between
-      matter and antimatter. Annihilation is prominent.`
+      `学校开学让全宇宙的学生感到恐惧，因为学校不再隔离
+      物质和反物质。湮灭现象显著。`
   },
   {
     id: "a67",
-    text: "Why does no one talk about the 0th dimension?"
+    text: "为什么没人谈论第 0 维度？"
   },
   {
     id: "a68",
-    text: "The fatter catter satter on the antimatter."
+    text: "更胖的猫坐在反物质上 (The fatter catter satter on the antimatter)。"
   },
   {
     id: "a69",
-    text: "Who let the DOgs out?"
+    text: "谁把狗放出来的？"
   },
   {
     id: "a70",
-    text: "If you can't read this, you disabled the news."
+    text: "如果你看不见这个，说明你禁用了新闻。"
   },
   {
     id: "a71",
-    text: "Doesn't leave, just mutes the server so he doesn't receive notifications."
+    text: "没有离开，只是静音了服务器，这样他就不会收到通知。"
   },
   {
     id: "a72",
-    text: `"Most quotes found online are falsely attributed." -Abraham Lincoln`
+    text: `"网上找到的大多数名言都是错误归属的。" -亚伯拉罕·林肯`
   },
   {
     id: "a73",
-    text: `"It should work now, but it doesn't." -Hevipelle`
+    text: `"它现在应该能工作，但它没有。" -Hevipelle`
   },
   {
     id: "a74",
-    text: "This game doesn't have any errors... they're alternative successes."
+    text: "这个游戏没有任何错误... 它们是另类的成功。"
   },
   {
     id: "a75",
     text:
-      `A third type of matter has been discovered: null matter. It doesn't do anything and is basically
-      useless. The scientists who discovered it were fired.`
+      `第三种物质已被发现：空物质。它什么也不做，基本上是
+      无用的。发现它的科学家被解雇了。`
   },
   {
     id: "a76",
-    text: "Your Mother-in-Law keeps nagging you about all these antimatter colliders."
+    text: "你的岳母一直在唠叨所有这些反物质对撞机。"
   },
   {
     id: "a77",
-    text: "If matter exists, then does antimatter not exist?"
+    text: "如果物质存在，那么反物质不存在吗？"
   },
   {
     id: "a78",
-    text: "Antimatter=Life. Not cobblestone, not dirt, nothing like that. Antimatter."
+    text: "反物质=生命。不是鹅卵石，不是泥土，不是那样的东西。反物质。"
   },
   {
     id: "a79",
-    text: "Breaking News: Error Error Error"
+    text: "突发新闻：错误 错误 错误"
   },
   {
     id: "a80",
-    text: "How much antiwood could an antiwoodchuck chuck if an antiwoodchuck could chuck antiwood?"
+    text: "如果一只反土拨鼠能抛反木头，那么一只反土拨鼠能抛多少反木头？"
   },
   {
     id: "a81",
-    text: "Chaos isnt a pit, chaos is a matter."
+    text: "混沌不是一个深坑，混沌是一种物质。"
   },
   {
     id: "a82",
-    text: `"That's because I'm a good game developer and pushed some code that totally works." -Hevipelle`
+    text: `"那是因为我是一个优秀的游戏开发者，并且推送了一些完全能运行的代码。" -Hevipelle`
   },
   {
     id: "a83",
-    text: "What's the matter with anti matter?"
+    text: "反物质怎么了 (What's the matter with anti matter)？"
   },
   {
     id: "a84",
-    text: "Doesn't it annoy you when people don't finish their"
+    text: "当人们不完成他们的句子时，你会不会感到恼火"
   },
   {
     id: "a85",
-    text: "Don't anti-quote me on this."
+    text: "不要反引用 (anti-quote) 我的话。"
   },
   {
     id: "a86",
-    text: "Antimatter is honest, matter makes up everything."
+    text: "反物质是诚实的，物质构成了一切 (everything)。"
   },
   {
     id: "a87",
     text:
-      `According to no known laws of aviation, there are multiple ways a bee
-      should be able to be swallowed up by antimatter.`
+      `根据已知的航空定律，蜜蜂有多种方式
+      应该能够被反物质吞噬。`
   },
   {
     id: "a88",
-    text: "You either die as matter or live long enough to be consumed by the antimatter, and then die again."
+    text: "你要么作为物质死去，要么活得足够长被反物质吞噬，然后再死一次。"
   },
   {
     id: "a89",
-    text: "If you gaze long enough into the antimatter, the antimatter gazes back into you."
+    text: "如果你凝视反物质太久，反物质也会凝视你。"
   },
   {
     id: "a90",
-    text: `"Always gonna give you up. Always gonna let you down." - anti-Rick Astley`
+    text: `"永远放弃你。永远让你失望。" - anti-Rick Astley`
   },
   {
     id: "a91",
-    text: "Antimatter Dimensions: the next update is always 5 hours away. Always."
+    text: "反物质维度：下一次更新总是 5 小时后。总是。"
   },
   {
     id: "a92",
@@ -457,47 +457,47 @@ export const news = [
         }
       ];
       const game = games.randomElement();
-      return `An unidentified developer of Antimatter Dimensions would like to
-        recommend that you play <a href="${game.link}" target="_blank">${game.name}</a>`;
+      return `一位身份不明的《反物质维度》开发者想
+        推荐你玩 <a href="${game.link}" target="_blank">${game.name}</a>`;
     },
   },
   {
     id: "a93",
     text:
-      `On a scale of 1 to 10, I rate this game a solid
+      `如果评分范围是 1 到 10，我给这个游戏打分是坚实的
       <span style='color: red'>java.lang.IndexOutOfBoundsException</span>`
   },
   {
     id: "a94",
-    text: "To matter or to antimatter, that is the question."
+    text: "物质还是反物质，这是一个问题。"
   },
   {
     id: "a95",
-    text: "Why is everything so Hevi?"
+    text: "为什么一切都这么 Hevi？"
   },
   {
     id: "a96",
     text:
-      `It has been scientifically proven ages ago, that cats made of matter are assholes. We have good news,
-      because cats made of antimatter are still assholes.`
+      `很久以前科学证明，物质构成的猫是混蛋。我们有好消息，
+      因为反物质构成的猫仍然是混蛋。`
   },
   {
     id: "a97",
-    text: "Nobody once told me the anti-world wasn't gonna roll me."
+    text: "没人告诉我反世界不会滚动我 (roll me)。"
   },
   {
     id: "a98",
-    text: "Antimatter is like the internet. If you're reading this, you can't have enough of it."
+    text: "反物质就像互联网。如果你在读这个，你就拥有不够多的它。"
   },
   {
     id: "a99",
     text:
-      `"Antimatter has made time travel possible and I'm here to make the
-      past great again." - 2nd President of the World`
+      `"反物质使时间旅行成为可能，我来这里是为了让
+      过去再次伟大。" - 世界第二任总统`
   },
   {
     id: "a100",
-    text: "Please insert Disc -1 to continue playing Antimatter Dimensions™."
+    text: "请插入光盘 -1 以继续游玩《反物质维度》™。"
   },
   {
     id: "a101",

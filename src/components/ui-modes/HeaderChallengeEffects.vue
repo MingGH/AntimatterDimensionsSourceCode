@@ -61,11 +61,11 @@ export default {
       this.isChallengePowerVisible = isChallengePowerVisible;
       if (isChallengePowerVisible) {
         const powerArray = [];
-        if (isC2Running) powerArray.push(`Production: ${formatPercents(player.chall2Pow, 2, 2)}`);
-        if (isC3Running) powerArray.push(`First dimension: ${formatX(player.chall3Pow, 3, 4)}`);
-        if (isIC6Running) powerArray.push(`Matter: Antimatter Dimensions /
+        if (isC2Running) powerArray.push(`生产: ${formatPercents(player.chall2Pow, 2, 2)}`);
+        if (isC3Running) powerArray.push(`第一维度: ${formatX(player.chall3Pow, 3, 4)}`);
+        if (isIC6Running) powerArray.push(`物质: 反物质维度 /
           ${format(new Decimal(1).timesEffectOf(InfinityChallenge(6)), 2, 2)}`);
-        if (isIC8Running) powerArray.push(`Production: /
+        if (isIC8Running) powerArray.push(`生产: /
           ${format(new Decimal(1).timesEffectOf(InfinityChallenge(8)).reciprocal(), 2, 2)}`);
         this.challengePower = powerArray.join(", ");
       }

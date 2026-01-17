@@ -51,21 +51,21 @@ export default {
     modeProps(mode) {
       switch (mode) {
         case AUTO_ETERNITY_MODE.AMOUNT: return {
-          title: "Eternity at X EP",
+          title: "在 X EP 时永恒",
           input: {
             property: "amount",
             type: "decimal"
           },
         };
         case AUTO_ETERNITY_MODE.TIME: return {
-          title: "Seconds between Eternities",
+          title: "永恒间隔秒数",
           input: {
             property: "time",
             type: "float"
           },
         };
         case AUTO_ETERNITY_MODE.X_HIGHEST: return {
-          title: "X times highest EP",
+          title: "X 倍最高 EP",
           input: {
             property: "xHighest",
             type: "decimal"
@@ -85,7 +85,7 @@ export default {
   <AutobuyerBox
     :autobuyer="autobuyer"
     :is-modal="isModal"
-    name="Automatic Eternity"
+    name="自动永恒"
   >
     <template #intervalSlot>
       <ExpandingControlBox
@@ -94,7 +94,7 @@ export default {
       >
         <template #header>
           <div class="o-primary-btn c-autobuyer-box__mode-select c-autobuyer-box__mode-select-header">
-            ▼ Current Setting: ▼
+            ▼ 当前设置: ▼
             <br>
             {{ modeName(mode) }}
           </div>

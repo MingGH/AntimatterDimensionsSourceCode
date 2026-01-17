@@ -45,7 +45,7 @@ export default {
     @confirm="handleYesClick"
   >
     <template #header>
-      Dimensional Sacrifice
+      维度献祭
     </template>
     <div class="c-modal-message__text">
       {{ message }}

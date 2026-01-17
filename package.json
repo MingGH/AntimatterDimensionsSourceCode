@@ -16,6 +16,8 @@
     "codemirror": "^5.65.1",
     "core-js": "^3.6.5",
     "drag-drop-touch": "^1.3.1",
+    "event-pubsub": "^4.3.0",
+    "execa": "^9.6.1",
     "firebase": "^9.6.6",
     "gamma": "^1.0.0",
     "js-sha512": "^0.8.0",
@@ -32,14 +34,15 @@
     "vue-gtag": "^1.16.1",
     "vue-loading-overlay": "^3.4.2",
     "vue-splitpane": "^1.0.6",
-    "vuedraggable": "^2.24.3"
+    "vuedraggable": "^2.24.3",
+    "webpack-chain": "^6.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
     "@vue/cli-plugin-babel": "^5.0.0-rc.0",
     "@vue/cli-plugin-eslint": "^5.0.0-rc.0",
-    "@vue/cli-service": "^5.0.0-rc.0",
+    "@vue/cli-service": "^5.0.9",
     "browserslist-useragent-regexp": "^3.0.2",
     "eslint": "^7.20.0",
     "eslint-import-resolver-alias": "^1.1.2",
