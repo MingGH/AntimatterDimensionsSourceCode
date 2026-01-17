@@ -17,47 +17,47 @@ const rebuyable = config => {
 export const pelleGalaxyGeneratorUpgrades = {
   additive: rebuyable({
     id: "galaxyGeneratorAdditive",
-    description: "Increase base Galaxy generation by 2",
+    description: "增加 2 基础星系生成",
     cost: x => Math.pow(3, x),
     effect: x => x * 2,
     formatEffect: x => `${format(x, 2, 2)}/s`,
     currency: () => Currency.galaxyGeneratorGalaxies,
-    currencyLabel: "Galaxy"
+    currencyLabel: "星系"
   }),
   multiplicative: rebuyable({
     id: "galaxyGeneratorMultiplicative",
-    description: "Multiply Galaxy generation",
+    description: "倍增星系生成",
     cost: x => Math.pow(10, x),
     effect: x => Decimal.pow(2.5, x),
     formatEffect: x => formatX(x, 2, 1),
     currency: () => Currency.galaxyGeneratorGalaxies,
-    currencyLabel: "Galaxy"
+    currencyLabel: "星系"
   }),
   antimatterMult: rebuyable({
     id: "galaxyGeneratorAntimatterMult",
-    description: "Multiply Galaxy generation",
+    description: "倍增星系生成",
     cost: x => Decimal.pow("1e100000000", 10 ** x),
     effect: x => Decimal.pow(2, x),
     formatEffect: x => formatX(x, 2),
     currency: () => Currency.antimatter,
-    currencyLabel: "Antimatter"
+    currencyLabel: "反物质"
   }),
   IPMult: rebuyable({
     id: "galaxyGeneratorIPMult",
-    description: "Multiply Galaxy generation",
+    description: "倍增星系生成",
     cost: x => Decimal.pow("1e2000000", 100 ** x),
     effect: x => Decimal.pow(2, x),
     formatEffect: x => formatX(x, 2),
     currency: () => Currency.infinityPoints,
-    currencyLabel: "Infinity Point"
+    currencyLabel: "无限点数"
   }),
   EPMult: rebuyable({
     id: "galaxyGeneratorEPMult",
-    description: "Multiply Galaxy generation",
+    description: "倍增星系生成",
     cost: x => Decimal.pow("1e10000", 1000 ** x),
     effect: x => Decimal.pow(2, x),
     formatEffect: x => formatX(x, 2),
     currency: () => Currency.eternityPoints,
-    currencyLabel: "Eternity Point"
+    currencyLabel: "永恒点数"
   }),
 };

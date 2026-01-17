@@ -27,95 +27,94 @@ const rebuyable = props => {
 
 export const realityUpgrades = [
   rebuyable({
-    name: "Temporal Amplifier",
+    name: "时间增幅器",
     id: 1,
     initialCost: 1,
     costMult: 30,
-    textTemplate: "You gain Dilated Time {value} times faster",
+    textTemplate: "你获得膨胀时间的速度加快 {value} 倍",
     effect: 3
   }),
   rebuyable({
-    name: "Replicative Amplifier",
+    name: "复制增幅器",
     id: 2,
     initialCost: 1,
     costMult: 30,
-    textTemplate: "You gain Replicanti {value} times faster",
+    textTemplate: "你获得复制器的速度加快 {value} 倍",
     effect: 3
   }),
   rebuyable({
-    name: "Eternal Amplifier",
+    name: "永恒增幅器",
     id: 3,
     initialCost: 2,
     costMult: 30,
-    textTemplate: "You gain {value} times more Eternities",
+    textTemplate: "你获得 {value} 倍的永恒次数",
     effect: 3
   }),
   rebuyable({
-    name: "Superluminal Amplifier",
+    name: "超光速增幅器",
     id: 4,
     initialCost: 2,
     costMult: 30,
-    textTemplate: "You gain {value} times more Tachyon Particles",
+    textTemplate: "你获得 {value} 倍的超光速粒子",
     effect: 3
   }),
   rebuyable({
-    name: "Boundless Amplifier",
+    name: "无界增幅器",
     id: 5,
     initialCost: 3,
     costMult: 50,
-    textTemplate: "You gain {value} times more Infinities",
+    textTemplate: "你获得 {value} 倍的无限次数",
     effect: 5
   }),
   {
-    name: "Cosmically Duplicate",
+    name: "宇宙复制",
     id: 6,
     cost: 15,
-    requirement: "Complete your first manual Eternity without using Replicanti Galaxies",
+    requirement: "在不使用复制器星系的情况下完成你的第一次手动永恒",
     // Note that while noRG resets on eternity, the reality-level check will be false after the first eternity.
     // The noRG variable is eternity-level as it's also used for an achievement check
     hasFailed: () => !(player.requirementChecks.eternity.noRG && player.requirementChecks.reality.noEternities),
     checkRequirement: () => player.requirementChecks.eternity.noRG && player.requirementChecks.reality.noEternities,
     checkEvent: GAME_EVENT.ETERNITY_RESET_BEFORE,
     canLock: true,
-    lockEvent: "gain a Replicanti Galaxy",
-    description: "Replicanti speed is multiplied based on Replicanti Galaxies",
+    lockEvent: "获得一个复制器星系",
+    description: "复制器速度基于复制器星系获得倍率",
     effect: () => 1 + Replicanti.galaxies.total / 50,
     formatEffect: value => formatX(value, 2, 2)
   },
   {
-    name: "Innumerably Construct",
+    name: "无数构造",
     id: 7,
     cost: 15,
-    requirement: "Complete your first Infinity with at most 1 Antimatter Galaxy",
+    requirement: "在最多 1 个反物质星系的情况下完成你的第一次无限",
     hasFailed: () => !(player.galaxies <= 1 && player.requirementChecks.reality.noInfinities),
     checkRequirement: () => player.galaxies <= 1 && player.requirementChecks.reality.noInfinities,
     checkEvent: GAME_EVENT.BIG_CRUNCH_BEFORE,
     canLock: true,
-    lockEvent: "gain another Antimatter Galaxy",
-    description: "Infinity gain is boosted from Antimatter Galaxy count",
+    lockEvent: "获得另一个反物质星系",
+    description: "无限次数获取受反物质星系数量加成",
     effect: () => 1 + player.galaxies / 30,
     formatEffect: value => formatX(value, 2, 2)
   },
   {
-    name: "Paradoxically Attain",
+    name: "悖论获得",
     id: 8,
     cost: 15,
-    requirement: "Manually Eternity without any automatic Achievements",
+    requirement: "手动永恒且不获得任何自动成就",
     hasFailed: () => player.reality.gainedAutoAchievements,
     checkRequirement: () => !player.reality.gainedAutoAchievements,
     checkEvent: GAME_EVENT.ETERNITY_RESET_BEFORE,
     canLock: true,
     // We don't have lockEvent because the modal can never show up for this upgrade
-    description: "Tachyon Particle gain is boosted based on Achievement multiplier",
+    description: "超光速粒子获取受成就倍率加成",
     effect: () => Math.sqrt(Achievements.power),
     formatEffect: value => formatX(value, 2, 2)
   },
   {
-    name: "Linguistically Expand",
+    name: "语言扩展",
     id: 9,
     cost: 15,
-    requirement: () => `Eternity for ${format("1e4000")} Eternity Points using
-      only a single Glyph which must be level ${formatInt(3)}+.`,
+    requirement: () => `仅使用一个等级为 ${formatInt(3)}+ 的符文进行永恒，获得 ${format("1e4000")} 永恒点数。`,
     hasFailed: () => {
       const invalidEquippedGlyphs = Glyphs.activeWithoutCompanion.length > 1 ||
         (Glyphs.activeWithoutCompanion.length === 1 && Glyphs.activeWithoutCompanion[0].level < 3);
@@ -127,75 +126,75 @@ export const realityUpgrades = [
     checkEvent: GAME_EVENT.ETERNITY_RESET_AFTER,
     canLock: true,
     // There are two locking events - equipping a glyph with too low a level, and equipping a second glyph
-    description: "Gain another Glyph slot",
+    description: "获得另一个符文槽",
     effect: () => 1
   },
   {
-    name: "Existentially Prolong",
+    name: "存在延长",
     id: 10,
     cost: 15,
-    requirement: () => `Complete your first manual Eternity with at least ${formatPostBreak(DC.E400)} Infinity Points`,
+    requirement: () => `以至少 ${formatPostBreak(DC.E400)} 无限点数完成你的第一次手动永恒`,
     hasFailed: () => !player.requirementChecks.reality.noEternities,
     checkRequirement: () => Currency.infinityPoints.exponent >= 400 &&
       player.requirementChecks.reality.noEternities,
     checkEvent: GAME_EVENT.ETERNITY_RESET_BEFORE,
     canLock: true,
-    lockEvent: "Eternity",
+    lockEvent: "永恒",
     bypassLock: () => Currency.infinityPoints.exponent >= 400,
-    description: () => `Start every Reality with ${formatInt(100)} Eternities (also applies to current Reality)`,
+    description: () => `每次现实开始时拥有 ${formatInt(100)} 次永恒（也适用于当前现实）`,
     automatorPoints: 15,
-    shortDescription: () => `Start with ${formatInt(100)} Eternities`,
+    shortDescription: () => `开始时拥有 ${formatInt(100)} 次永恒`,
     effect: () => 100
   },
   {
-    name: "The Boundless Flow",
+    name: "无界之流",
     id: 11,
     cost: 50,
-    requirement: () => `${format(Currency.infinitiesBanked.value, 2)}/${format(DC.E12)} Banked Infinities`,
+    requirement: () => `${format(Currency.infinitiesBanked.value, 2)}/${format(DC.E12)} 存储的无限`,
     checkRequirement: () => Currency.infinitiesBanked.exponent >= 12,
     checkEvent: [GAME_EVENT.ETERNITY_RESET_AFTER, GAME_EVENT.REALITY_FIRST_UNLOCKED],
-    description: "Every second, gain 10% of the Infinities you would normally gain by Infinitying",
+    description: "每秒获得你正常无限时获得的无限次数的 10%",
     automatorPoints: 5,
-    shortDescription: () => `Continuous Infinity generation`,
+    shortDescription: () => `持续无限生成`,
     effect: () => gainedInfinities().times(0.1),
-    formatEffect: value => `${format(value)} per second`
+    formatEffect: value => `${format(value)} 每秒`
   },
   {
-    name: "The Knowing Existence",
+    name: "全知存在",
     id: 12,
     cost: 50,
-    requirement: () => `Eternity for ${format(DC.E70)} Eternity Points without completing Eternity Challenge 1`,
+    requirement: () => `在不完成永恒挑战 1 的情况下，以 ${format(DC.E70)} 永恒点数进行永恒`,
     hasFailed: () => EternityChallenge(1).completions !== 0,
     checkRequirement: () => Currency.eternityPoints.exponent >= 70 && EternityChallenge(1).completions === 0,
     checkEvent: GAME_EVENT.ETERNITY_RESET_AFTER,
     canLock: true,
-    lockEvent: "complete Eternity Challenge 1",
-    description: "Eternity Point multiplier based on Reality and Time Theorem count",
+    lockEvent: "完成永恒挑战 1",
+    description: "基于现实次数和时间定理数量的永恒点数倍率",
     effect: () => Currency.timeTheorems.value
       .minus(DC.E3).clampMin(2)
       .pow(Math.log2(Math.min(Currency.realities.value, 1e4))).clampMin(1),
     formatEffect: value => formatX(value, 2, 2)
   },
   {
-    name: "The Telemechanical Process",
+    name: "远程机械过程",
     id: 13,
     cost: 50,
-    requirement: () => `Eternity for ${format(DC.E4000)} Eternity Points without Time Dim. 5-8`,
+    requirement: () => `在不拥有时间维度 5-8 的情况下，以 ${format(DC.E4000)} 永恒点数进行永恒`,
     hasFailed: () => !Array.range(5, 4).every(i => TimeDimension(i).amount.equals(0)),
     checkRequirement: () => Currency.eternityPoints.exponent >= 4000 &&
       Array.range(5, 4).every(i => TimeDimension(i).amount.equals(0)),
     checkEvent: GAME_EVENT.ETERNITY_RESET_AFTER,
     canLock: true,
-    lockEvent: "purchase a Time Dimension above the 4th TD",
-    description: () => `Improve Eternity Autobuyer and unlock autobuyers for Time Dimensions and ${formatX(5)} EP`,
+    lockEvent: "购买第 4 维度以上的时间维度",
+    description: () => `改进永恒自动购买器并解锁时间维度和 ${formatX(5)} EP 的自动购买器`,
     automatorPoints: 10,
-    shortDescription: () => `TD and ${formatX(5)} EP Autobuyers, improved Eternity Autobuyer`,
+    shortDescription: () => `时间维度和 ${formatX(5)} EP 自动购买器，改进的永恒自动购买器`,
   },
   {
-    name: "The Eternal Flow",
+    name: "永恒之流",
     id: 14,
     cost: 50,
-    requirement: () => `${format(Currency.eternities.value, 2)}/${format(1e7)} Eternities`,
+    requirement: () => `${format(Currency.eternities.value, 2)}/${format(1e7)} 永恒`,
     checkRequirement: () => Currency.eternities.gte(1e7),
     checkEvent: [GAME_EVENT.ETERNITY_RESET_AFTER, GAME_EVENT.REALITY_FIRST_UNLOCKED],
     description: "Gain Eternities per second equal to your Reality count",

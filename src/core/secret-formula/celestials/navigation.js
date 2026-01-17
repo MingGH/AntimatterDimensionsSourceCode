@@ -13,8 +13,8 @@ export function vUnlockProgress(index) {
 
 export function vUnlockLegendLabel(complete, index) {
   const db = Object.values(GameDatabase.celestials.v.mainUnlock).find(e => e.id === index);
-  if (complete >= 1) return `${db.name} condition for V`;
-  return `Reach ${db.format(db.resource())} / ${db.format(db.requirement)} ${db.name}.`;
+  if (complete >= 1) return `V 的 ${db.name} 条件`;
+  return `达到 ${db.format(db.resource())} / ${db.format(db.requirement)} ${db.name}。`;
 }
 
 // Angle is defined/rescaled so that 0 is the first rift, 4 is the last one, and all 5 are equally spaced around

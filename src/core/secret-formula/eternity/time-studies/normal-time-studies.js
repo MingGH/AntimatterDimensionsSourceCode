@@ -38,7 +38,7 @@ export const normalTimeStudies = [
     // All requirements of an empty array will always evaluate to true, so this study is always purchasable
     requirement: [],
     reqType: TS_REQUIREMENT_TYPE.ALL,
-    description: "Tickspeed affects 1st Time Dimension with reduced effect",
+    description: "Tick 速度以降低的效果影响第一时间维度",
     effect: () => {
       const tickspeed = Tickspeed.current.dividedBy(1000);
       const firstPart = tickspeed.pow(0.005).times(0.95);
@@ -53,7 +53,7 @@ export const normalTimeStudies = [
     cost: 3,
     requirement: [11],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
-    description: () => `Improve Replicanti multiplier formula to
+    description: () => `改进复制器倍率公式为
       (log2(x)${formatPow(2)})+x${formatPow(0.032, 3, 3)}`,
     effect: () => Replicanti.amount.pow(0.032),
     // This is a special case because the study itself is *added* to the existing formula, but it makes more sense
@@ -70,7 +70,7 @@ export const normalTimeStudies = [
     cost: 2,
     requirement: [11],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
-    description: () => `Base Replicanti interval limit ${formatInt(50)}ms ➜ ${formatInt(1)}ms`,
+    description: () => `基础复制器间隔限制 ${formatInt(50)}ms ➜ ${formatInt(1)}ms`,
     effect: 1
   },
   {
@@ -78,7 +78,7 @@ export const normalTimeStudies = [
     cost: 3,
     requirement: [21],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
-    description: () => `Powers up multipliers that are based on your Infinities (Bonuses${formatPow(4)})`,
+    description: () => `增强基于你的无限次数的倍率 (加成${formatPow(4)})`,
     effect: 4
   },
   {
@@ -86,7 +86,7 @@ export const normalTimeStudies = [
     cost: 2,
     requirement: [22],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
-    description: `You gain more Infinities based on Dimension Boosts`,
+    description: `基于维度提升获得更多无限次数`,
     effect: () => Math.max(DimBoost.totalBoosts, 1),
     formatEffect: value => formatX(value, 2)
   },
@@ -95,7 +95,7 @@ export const normalTimeStudies = [
     cost: 2,
     requirement: [22],
     reqType: TS_REQUIREMENT_TYPE.AT_LEAST_ONE,
-    description: "You keep half of your Replicanti Galaxies on Infinity"
+    description: "无限时保留一半的复制器星系"
   },
   {
     id: 41,

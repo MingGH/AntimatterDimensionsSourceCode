@@ -13,348 +13,348 @@ const flashCelestial = [
 const primaryBackground = cel => [["pelle", 1.5], [cel, 1.5]];
 
 /* eslint-disable no-multi-spaces */
-const destroyer =    ["False",         "Deity",         "Destroyer"];
-const eternal =      ["Eternal",       "Deity",         "Monarch"];
-const lesser =       ["Lesser",        "Deity",         "Monarch"];
-const deities =      ["Lesser",        "Deities",       "Monarchs"];
+const destroyer =    ["虚假",         "神明",         "毁灭者"];
+const eternal =      ["永恒",       "神明",         "君主"];
+const lesser =       ["低等",        "神明",         "君主"];
+const deities =      ["低等",        "众神",       "诸王"];
 
-const assured =      ["Mutually",      "Assured",       "Destruction"];
-const battle =       ["Conflict",      "Battle",        "End"];
-const battles =      ["Conflicts",     "Battles",       "Ends"];
-const cluster =      ["Cluster",       "Filament",      "Stars"];
-const confusing =    ["Amusing",       "Confusing",     "Laughter"];
-const dance =        ["Song",          "Dance",         "Charade"];
-const filament =     ["Generator",     "Filament",      "Stars"];
-const forever =      ["Infinite",      "Forever",       "Eternal"];
-const inevitable =   ["Elementary",    "Inevitable",    "Irreversible"];
-const mandate =      ["Destiny",       "Mandate",       "Goals"];
-const misconstrue =  ["Misconstrue",   "Deceive",       "Trick"];
-const reverse =      ["Alter",         "Reverse",       "Manipulate"];
-const shame =        ["Compassion",    "Shame",         "Idiocy"];
-const single =       ["Single",        "Filament",      "Stars"];
-const unseen =       ["Missing",       "Unseen",        "Erased"];
-const unbroken =     ["Unbroken",      "Eternal",       "Connection"];
+const assured =      ["相互",      "保证",       "毁灭"];
+const battle =       ["冲突",      "战斗",        "终结"];
+const battles =      ["冲突",     "战斗",       "终结"];
+const cluster =      ["星团",       "丝状",      "星辰"];
+const confusing =    ["有趣",       "困惑",     "笑声"];
+const dance =        ["歌",          "舞",         "字谜"];
+const filament =     ["生成器",     "丝状",      "星辰"];
+const forever =      ["无限",      "永远",       "永恒"];
+const inevitable =   ["基础",    "必然",    "不可逆"];
+const mandate =      ["命运",       "指令",       "目标"];
+const misconstrue =  ["误解",   "欺骗",       "诡计"];
+const reverse =      ["改变",         "逆转",       "操控"];
+const shame =        ["怜悯",    "羞耻",         "愚蠢"];
+const single =       ["单一",        "丝状",      "星辰"];
+const unseen =       ["缺失",       "未见",        "抹除"];
+const unbroken =     ["完整",      "永恒",       "连接"];
 
-const sycophant =    ["Sycophant",     "Deity",         "Monarch"];
-const tired =        ["Tired",         "Deity",         "Monarch"];
-const usurper =      ["Usurper",       "Deity",         "Monarch"];
-const pride =        ["Pride",         "Deity",         "Monarch"];
-const forgotten =    ["Forgotten",     "Deity",         "Monarch"];
-const paramount =    ["Paramount",     "Deity",         "Monarch"];
+const sycophant =    ["奉承者",     "神明",         "君主"];
+const tired =        ["疲惫",         "神明",         "君主"];
+const usurper =      ["篡位者",       "神明",         "君主"];
+const pride =        ["傲慢",         "神明",         "君主"];
+const forgotten =    ["遗忘",     "神明",         "君主"];
+const paramount =    ["至高",     "神明",         "君主"];
 /* eslint-enable no-multi-spaces */
 
 export const pelleQuotes = {
   initial: {
     id: 0,
     lines: [
-      "Hi.",
-      "You are here.",
-      "You are trapped here.",
-      { text: "$1.", 1: forever },
-      "I have already won.",
-      "And since that is the case, I can monologue, or reminisce.",
-      { text: "How long have we done this $1?", 1: dance },
-      "How many times have we been here before?",
-      { text: "How many plans have you, the $1, operated?", 1: destroyer },
-      { text: "All to try and fulfill your $1?", 1: mandate },
-      { text: "And how many times have you fallen before the $1?", 1: eternal },
-      "Count them, if you remember.",
-      { text: "Not even the $1, the 6 named and the innumerable unnamed.", 1: deities },
-      { text: "The complex, the irrational, those that go $1.", 1: unseen },
-      { text: "Of course, the great $1 does not remember this.", 1: destroyer },
-      { text: "All those $1 that you hide every time.", 1: battles }
+      "嗨。",
+      "你在这里。",
+      "你被困在这里。",
+      { text: "$1。", 1: forever },
+      "我已经赢了。",
+      "既然如此，我可以独白，或者追忆。",
+      { text: "我们进行这场 $1 多久了？", 1: dance },
+      "我们以前来过这里多少次了？",
+      { text: "你，这个 $1，执行了多少计划？", 1: destroyer },
+      { text: "一切都是为了实现你的 $1？", 1: mandate },
+      { text: "又有多少次你倒在了 $1 面前？", 1: eternal },
+      "数数吧，如果你还记得。",
+      { text: "甚至不是 $1，那 6 个有名字的和无数无名字的。", 1: deities },
+      { text: "那些复杂的，不理智的，那些变得 $1 的。", 1: unseen },
+      { text: "当然，伟大的 $1 不记得这些。", 1: destroyer },
+      { text: "所有那些你每次都隐藏的 $1。", 1: battles }
     ],
   },
   arm: {
     id: 1,
     lines: [
-      "You probably caught on earlier this time.",
-      "The imaginary machines, your own creations.",
-      "Things made of the remnants of your own thoughts, hinted at this.",
-      "But, you never imagined that would be you, right?",
-      { text: "Incorrectly recollecting your exacting $1 of memories.", 1: unseen },
-      { text: `"Fabrication" of your own "ideology" just to fulfill your $1.`, 1: mandate },
-      { text: "$1.", 1: confusing },
-      { text: "And keep in mind I have no reason to $1 you.", 1: misconstrue },
-      "After all, I have already won."
+      "这次你可能更早察觉到了。",
+      "想象机器，你自己的创造物。",
+      "由你自己的思想残骸构成的事物，暗示了这一点。",
+      "但是，你从未想过那就是你，对吧？",
+      { text: "错误地回忆着你对记忆的严苛 $1。", 1: unseen },
+      { text: `为你自己的“意识形态”的“捏造”，只为实现你的 $1。`, 1: mandate },
+      { text: "$1。", 1: confusing },
+      { text: "记住，我没有理由 $1 你。", 1: misconstrue },
+      "毕竟，我已经赢了。"
     ],
   },
   strike1: {
     id: 2,
     lines: [
-      { text: "To fulfill your $1. Why don't we reminisce about that?", 1: mandate },
-      { text: "After all, you must love the stories of the $1's glory.", 1: destroyer },
-      "You are the same as it, right?",
-      { text: "Anyway, the many $1 in the past.", 1: battles },
-      "It has always been 2 stages.",
-      { text: "We build up resources, and then continue our $1.", 1: dance },
-      { text: "Sometimes you falter to a $1.", 1: lesser },
-      { text: "But, usually, you falter at the $1.", 1: eternal },
-      { text: "And either way, you $1 time.", 1: reverse },
-      { text: "Just to avoid becoming $1.", 1: unseen },
-      "Like all those traces before you.",
-      { text: "And then to make sure, you $1 your own memory.", 1: unseen }
+      { text: "为了实现你的 $1。我们何不追忆一下那个？", 1: mandate },
+      { text: "毕竟，你一定喜欢关于 $1 的荣耀的故事。", 1: destroyer },
+      "你和它一样，对吧？",
+      { text: "总之，过去的许多 $1。", 1: battles },
+      "一直都是两个阶段。",
+      { text: "我们积累资源，然后继续我们的 $1。", 1: dance },
+      { text: "有时你在这个 $1 面前动摇。", 1: lesser },
+      { text: "但通常，你在 $1 面前动摇。", 1: eternal },
+      { text: "无论哪种方式，你都在 $1 时间。", 1: reverse },
+      { text: "只为避免变得 $1。", 1: unseen },
+      "就像你之前的所有痕迹一样。",
+      { text: "然后为了确保，你 $1 你自己的记忆。", 1: unseen }
     ],
   },
   strike2: {
     id: 3,
     lines: [
-      { text: "In the past, the $1 was much more impressive.", 1: destroyer },
-      "Black holes used simply to store information, pre-infinity.",
-      "The creation and destruction of your own enemy.",
-      "Exploration of the flaws of other selves.",
-      "Myriad Dimensions, ghosts, and manipulation of the quantum.",
-      "Condensing all ideals to endless points.",
-      "Experimentation across the untold realms.",
-      "And harnessing the Annihilation of matter and antimatter.",
-      "Here? You made yourself into an 8th-dimensional being.",
-      { text: "And then parked yourself there so long a $1 formed around you.", 1: single }
+      { text: "在过去，$1 要令人印象深刻得多。", 1: destroyer },
+      "黑洞仅用于存储信息，无限之前。",
+      "你自己敌人的创造与毁灭。",
+      "探索其他自我的缺陷。",
+      "无数的维度，幽灵，以及量子操控。",
+      "将所有理想凝聚成无尽的点。",
+      "跨越无数领域的实验。",
+      "以及利用物质与反物质的湮灭。",
+      "这里？你把自己变成了八维生物。",
+      { text: "然后在那里停了太久，以至于一个 $1 在你周围形成。", 1: single }
     ],
   },
   strike3: {
     id: 4,
     lines: [
-      "You slowly explored the confines of everything.",
-      "You did not stray too far from an intended path.",
-      { text: "Except for the $1 that formed over eternity.", 1: cluster },
-      "And then right at the end, you made up your own powers.",
-      "From your own fragmented memories, mind you-",
-      "And then purposely discarded even more things.",
-      "Just to prepare yourself to face me.",
-      { text: "Did you want to set the playing field for your $1?", 1: dance },
-      "It does not work like that.",
-      { text: "As the $1 I always set the rules.", 1: eternal },
-      "And you gave me plenty of time to plan."
+      "你慢慢探索了一切的界限。",
+      "你没有偏离预定道路太远。",
+      { text: "除了那个在永恒中形成的 $1。", 1: cluster },
+      "然后在最后，你编造了自己的力量。",
+      "从你自己破碎的记忆中，提醒你一下——",
+      "然后故意丢弃更多的东西。",
+      "只为准备好面对我。",
+      { text: "你想为你的 $1 设置场地吗？", 1: dance },
+      "不是那样运作的。",
+      { text: "作为 $1，我总是制定规则。", 1: eternal },
+      "而你给了我足够的时间来计划。"
     ],
   },
   strike4: {
     id: 5,
     lines: [
-      { text: "I originally planned for something that imitated your $1.", 1: mandate },
-      { text: "A theoretical ideal called $1?", 1: assured },
-      "But I realised that, well?",
-      { text: "That would make me an $1.", 1: ["Eternal", "Deity", "Destroyer"] },
-      { text: "And from there, I am no better than the $1.", 1: destroyer },
-      { text: "Fortunately, while I did all of that, you were still $1 your own memories.", 1: unseen },
-      { text: "And so, the $1 machine I built will go unused.", 1: assured },
-      "I decided to go more traditional this time.",
-      { text: "After all, it has worked every other $1.", 1: battle },
-      { text: "Although the $1 are new.", 1: ["Inevitable", "Irreversible", "Undying"] },
-      "But, utterly meaningless in the long run.",
-      "I have already won.",
-      { text: "And this $1 will only prove that to you once more.", 1: dance },
-      { text: "You are here $1.", 1: forever }
+      { text: "我原本计划模仿你的 $1。", 1: mandate },
+      { text: "一个被称为 $1 的理论理想？", 1: assured },
+      "但我意识到，嗯？",
+      { text: "那会让我成为一个 $1。", 1: ["永恒", "神明", "毁灭者"] },
+      { text: "从那里开始，我不比 $1 好多少。", 1: destroyer },
+      { text: "幸运的是，当我做所有这些时，你仍在 $1 你自己的记忆。", 1: unseen },
+      { text: "所以，我建造的 $1 机器将不会被使用。", 1: assured },
+      "我决定这次更传统一点。",
+      { text: "毕竟，它在其他所有 $1 中都奏效了。", 1: battle },
+      { text: "虽然 $1 是新的。", 1: ["必然", "不可逆", "不朽"] },
+      "但从长远来看，完全没有意义。",
+      "我已经赢了。",
+      { text: "而这个 $1 只会再次向你证明这一点。", 1: dance },
+      { text: "你在这里 $1。", 1: forever }
     ],
   },
   strike5: {
     id: 6,
     lines: [
-      { text: "Every time you arrive, I explain the $1 to you.", 1: deities },
-      { text: "The relationships built over $1.", 1: forever },
-      { text: "That you trample in pursuit of your $1.", 1: mandate },
-      "And I shall deign to explain it once more.",
+      { text: "每次你到达，我都向你解释 $1。", 1: deities },
+      { text: "建立在 $1 之上的关系。", 1: forever },
+      { text: "你在追求你的 $1 时践踏了它。", 1: mandate },
+      "我将屈尊再次解释它。",
       {
-        text: "The first $1.",
+        text: "第一个 $1。",
         background: primaryBackground("teresa"),
         1: lesser
       }, {
-        text: "The $1.",
+        text: "$1。",
         background: primaryBackground("teresa"),
         1: sycophant
       }, {
-        text: "You always meet them first, and always destroy them.",
+        text: "你总是先遇到他们，并总是摧毁他们。",
         background: primaryBackground("teresa"),
       }, {
-        text: "No matter the other $1 that you face.",
+        text: "无论你面对的其他 $1 是什么。",
         background: primaryBackground("teresa"),
         1: lesser
       }, {
-        text: "Or, if you fall before one of them.",
+        text: "或者，如果你倒在其中一个面前。",
         background: primaryBackground("teresa"),
       }, {
-        text: "You always get past the $1.",
+        text: "你总是通过 $1。",
         background: primaryBackground("teresa"),
         1: sycophant
       }, {
-        text: "Do you like destroying their pride?",
+        text: "你喜欢摧毁他们的骄傲吗？",
         background: primaryBackground("teresa"),
       }, {
-        text: "Fortunately, it also serves as a warning.",
+        text: "幸运的是，这也作为一个警告。",
         background: primaryBackground("teresa"),
       }, {
-        text: "That the $1 has arrived.",
+        text: "$1 已经到来。",
         background: primaryBackground("teresa"),
         1: battle
       }, {
-        text: "Which brings me to the second $1.",
+        text: "这把我带到了第二个 $1。",
         background: primaryBackground("effarig"),
         1: lesser,
       }, {
-        text: "The $1.",
+        text: "$1。",
         background: primaryBackground("effarig"),
         1: tired,
       }, {
-        text: "In contrast, you usually ignore them.",
+        text: "相比之下，你通常忽略他们。",
         background: primaryBackground("effarig"),
       }, {
-        text: "They have power, but do not seem to irritate you.",
+        text: "他们拥有力量，但似乎并不激怒你。",
         background: primaryBackground("effarig"),
       }, {
-        text: "Is it that you know that they will eventually destroy themselves?",
+        text: "是因为你知道他们最终会自我毁灭吗？",
         background: primaryBackground("effarig"),
       }, {
-        text: "And that you took so long this time, that they almost did?",
+        text: "而你这次花了这么长时间，他们差点就这么做了？",
         background: primaryBackground("effarig"),
       }, {
-        text: "Every time you rushed to the $1, you lost.",
+        text: "每次你冲向 $1，你都输了。",
         background: primaryBackground("effarig"),
         1: tired,
       }, {
-        text: "Maybe this was your plan all along.",
+        text: "也许这一直是你的计划。",
         background: primaryBackground("effarig"),
       }, {
-        text: "Now, the $1.",
+        text: "现在，$1。",
         background: primaryBackground("enslaved"),
         1: usurper,
       }, {
-        text: "One of the pleasures of the myriad $1...",
+        text: "无数 $1 的乐趣之一……",
         background: primaryBackground("enslaved"),
         1: dance,
       }, {
-        text: "Is that the $1 trying every time.",
+        text: "是 $1 每次都在尝试。",
         background: primaryBackground("enslaved"),
         1: usurper,
       }, {
-        text: "Well, not exactly trying...",
+        text: "好吧，不完全是尝试……",
         background: primaryBackground("enslaved"),
       }, {
-        text: "But $1 is punished for it all the same.",
+        text: "但 $1 仍然因此受到惩罚。",
         background: primaryBackground("enslaved"),
         1: usurper,
       }, {
-        text: "The other $1...",
+        text: "其他的 $1……",
         background: primaryBackground("enslaved"),
         1: deities,
       }, {
-        text: "Believe $1 is too easy.",
+        text: "相信 $1 太容易了。",
         background: primaryBackground("enslaved"),
         1: unseen,
       }, {
-        text: "And every time, despair forms.",
+        text: "每一次，绝望都会形成。",
         background: primaryBackground("enslaved"),
       }, {
-        text: "You have seen despair before - 5 times.",
+        text: "你以前见过绝望 - 5 次。",
         background: primaryBackground("enslaved"),
       }, {
-        text: "We always get to the $1 before you.",
+        text: "我们总是比你先到达 $1。",
         background: primaryBackground("enslaved"),
         1: usurper,
       }, {
-        text: "All you ever see there is exasperation.",
+        text: "你在那里看到的只有恼怒。",
         background: primaryBackground("enslaved"),
       }, {
-        text: "Was it worth destroying an already broken $1?",
+        text: "摧毁一个已经破碎的 $1 值得吗？",
         background: primaryBackground("enslaved"),
         1: lesser,
       }, {
-        text: "The 4th $1 seems similar to the first.",
+        text: "第四个 $1 似乎与第一个相似。",
         background: primaryBackground("v"),
         1: lesser,
       }, {
-        text: "The key is how their pride differs.",
+        text: "关键在于他们的骄傲有何不同。",
         background: primaryBackground("v"),
       }, {
-        text: "The $1 focuses on their achievements.",
+        text: "$1 专注于他们的成就。",
         background: primaryBackground("v"),
         1: pride,
       }, {
-        text: "Meaningless to you or I, but paramount to them.",
+        text: "对你我毫无意义，但对他们至关重要。",
         background: primaryBackground("v"),
       }, {
-        text: "Is it fun to destroy their toys?",
+        text: "摧毁他们的玩具好玩吗？",
         background: primaryBackground("v"),
       }, {
-        text: "Arguably the $1 worst moment...",
+        text: "可以说是 $1 最糟糕的时刻……",
         background: primaryBackground("v"),
         1: destroyer,
       }, {
-        text: "Is when you lost to the $1.",
+        text: "是你输给 $1 的时候。",
         background: primaryBackground("v"),
         1: pride,
       }, {
-        text: "When their achievements still had meaning.",
+        text: "当他们的成就仍有意义时。",
         background: primaryBackground("v"),
       }, {
-        text: "The $1 is an interesting case.",
+        text: "$1 是一个有趣的案例。",
         background: primaryBackground("ra"),
         1: forgotten,
       }, {
-        text: "They are forgotten, but not $1.",
+        text: "他们被遗忘，但并未 $1。",
         background: primaryBackground("ra"),
         1: unseen,
       }, {
-        text: "From this, they became influenceable and naive.",
+        text: "由此，他们变得易受影响且天真。",
         background: primaryBackground("ra"),
       }, {
-        text: "And unknowing of the consequences of their actions.",
+        text: "并且不知道他们行为的后果。",
         background: primaryBackground("ra"),
       }, {
-        text: "You manipulated their memories, so you know.",
+        text: "你操控了他们的记忆，所以你知道。",
         background: primaryBackground("ra"),
       }, {
-        text: "The $1 is the true usurper.",
+        text: "$1 是真正的篡位者。",
         background: primaryBackground("ra"),
         1: forgotten,
       }, {
-        text: "And the $1 takes the blame.",
+        text: "而 $1 承担了责任。",
         background: primaryBackground("ra"),
         1: usurper,
       }, {
-        text: "Perhaps out of $1, something they always regret.",
+        text: "也许是出于 $1，某种他们总是后悔的东西。",
         background: primaryBackground("ra"),
         1: shame,
       }, {
-        text: "Untold power over other $1, aimless in control.",
+        text: "对其他 $1 拥有无穷的力量，控制却漫无目的。",
         background: primaryBackground("ra"),
         1: deities,
       }, {
-        text: "You usually pretend that they are $1.",
+        text: "你通常假装他们是 $1。",
         background: primaryBackground("ra"),
         1: unseen,
       }, {
-        text: "Was it fun to manipulate the childlike?",
+        text: "操控孩子气的人好玩吗？",
         background: primaryBackground("ra"),
       }, {
-        text: "Or were they too naive for you to enjoy it?",
+        text: "还是他们太天真了，让你无法享受？",
         background: primaryBackground("ra"),
       }, {
-        text: "The 6th $1.",
+        text: "第六个 $1。",
         background: primaryBackground("laitela"),
         1: lesser,
       }, {
-        text: "I can only describe as the $1.",
+        text: "我只能描述为 $1。",
         background: primaryBackground("laitela"),
         1: paramount,
       }, {
-        text: "Power over all, subservient to one.",
+        text: "凌驾于一切之上，屈从于一人。",
         background: primaryBackground("laitela"),
       }, {
-        text: "If you do not fall to me, you usually fall to them.",
+        text: "如果你没有倒在我面前，你通常会倒在他们面前。",
         background: primaryBackground("laitela"),
       }, {
-        text: "I cannot grasp the ideals of the $1.",
+        text: "我无法理解 $1 的理想。",
         background: primaryBackground("laitela"),
         1: paramount,
       }, {
-        text: "But, perhaps that is their flaw?",
+        text: "但是，也许那就是他们的缺陷？",
         background: primaryBackground("laitela"),
       },
-      "Enough reminiscing about the fallen.",
+      "关于堕落者的追忆已经够了。",
       {
-        text: "And those that will be $1.",
+        text: "以及那些将变得 $1 的人。",
         1: unseen
       }, {
-        text: "Back to watching the $1 flounder.",
+        text: "回到观看 $1 挣扎。",
         1: destroyer
       }
     ],
@@ -362,75 +362,75 @@ export const pelleQuotes = {
   galaxyGeneratorUnlock: {
     id: 7,
     lines: [
-      "What is that?",
-      { text: "The $1?", 1: filament },
-      { text: "Did you create all the $1 around you?", 1: cluster },
-      "Was that your plan? Very, very smart.",
-      "You fooled me for a while.",
-      { text: "But I am afraid your $1 must end here.", 1: mandate }
+      "那是什么？",
+      { text: "$1？", 1: filament },
+      { text: "你创造了你周围所有的 $1 吗？", 1: cluster },
+      "那是你的计划吗？非常，非常聪明。",
+      "你骗了我一阵子。",
+      { text: "但我恐怕你的 $1 必须在这里结束。", 1: mandate }
     ],
   },
   galaxyGeneratorRifts: {
     id: 8,
     lines: [
-      { text: "I give you a choice, $1.", 1: destroyer },
-      { text: "Limit the $1, or...", 1: filament },
-      { text: "Destroy the 5 $1...", 1: inevitable },
-      "Wait, what were they called?",
-      { text: "$1?", 1: inevitable },
-      { text: "But I have already $1 them...", 1: unbroken }
+      { text: "我给你一个选择，$1。", 1: destroyer },
+      { text: "限制 $1，或者……", 1: filament },
+      { text: "摧毁那 5 个 $1……", 1: inevitable },
+      "等等，它们叫什么来着？",
+      { text: "$1？", 1: inevitable },
+      { text: "但我已经 $1 它们了……", 1: unbroken }
     ],
   },
   galaxyGeneratorPhase1: {
     id: 9,
     lines: [
-      "Was this the actual plan?",
-      { text: "Slowly drain the $1?", 1: inevitable }
+      "这是实际的计划吗？",
+      { text: "慢慢耗尽 $1？", 1: inevitable }
     ],
   },
   galaxyGeneratorPhase4: {
     id: 10,
     lines: [
-      "Give me time to bask in my own hubris!"
+      "给我时间沉浸在我自己的傲慢中！"
     ],
   },
   end: {
     id: 11,
     lines: [
-      "...",
+      "……",
       {
-        text: "You! $1!",
+        text: "你！$1！",
         1: destroyer
       },
-      "Do you have any idea what you have just made me do!",
+      "你知道你刚刚让我做了什么吗！",
       {
-        text: "I am complicit in your $1!",
+        text: "我是你 $1 的共犯！",
         1: mandate
       },
-      "And in doing so, you... won?",
+      "而在这样做的过程中，你……赢了？",
       {
-        text: "The $1 struggle...",
+        text: "$1 的斗争……",
         background: flashCelestial,
         1: forever,
       }, {
-        text: "The $1...",
+        text: "$1……",
         background: flashCelestial,
         1: battle,
       }, {
-        text: "Finally has the victor.",
+        text: "终于有了胜利者。",
         background: flashCelestial,
       }, {
-        text: "The irreversible... $1.",
+        text: "不可逆转的……$1。",
         background: flashCelestial,
         1: mandate,
       }, {
-        text: "Of the $1.", 1: destroyer,
+        text: "$1 的。", 1: destroyer,
         background: flashCelestial,
       }, {
-        text: "I hope you are happy.",
+        text: "希望你开心。",
         background: flashCelestial,
       }, {
-        text: "You have doomed us all.",
+        text: "你注定了我们所有人的毁灭。",
         background: flashCelestial,
       },
     ],

@@ -17,8 +17,8 @@ function rebuyable(config) {
       (value => {
         const afterECText = config.afterEC ? config.afterEC() : "";
         return value === config.maxUpgrades
-          ? `Currently: ${formatX(10 - value)} ${afterECText}`
-          : `Currently: ${formatX(10 - value)} | Next: ${formatX(10 - value - 1)}`;
+          ? `当前: ${formatX(10 - value)} ${afterECText}`
+          : `当前: ${formatX(10 - value)} | 下一级: ${formatX(10 - value - 1)}`;
       }),
     formatCost: value => format(value, 2, 0),
     noLabel,
@@ -30,41 +30,41 @@ export const breakInfinityUpgrades = {
   totalAMMult: {
     id: "totalMult",
     cost: 1e4,
-    description: "Antimatter Dimensions gain a multiplier based on total antimatter produced",
+    description: "反物质维度获得一个基于生产的反物质总量的倍率",
     effect: () => Math.pow(player.records.totalAntimatter.exponent + 1, 0.5),
     formatEffect: value => formatX(value, 2, 2)
   },
   currentAMMult: {
     id: "currentMult",
     cost: 5e4,
-    description: "Antimatter Dimensions gain a multiplier based on current antimatter",
+    description: "反物质维度获得一个基于当前反物质的倍率",
     effect: () => Math.pow(Currency.antimatter.exponent + 1, 0.5),
     formatEffect: value => formatX(value, 2, 2)
   },
   galaxyBoost: {
     id: "postGalaxy",
     cost: 5e11,
-    description: () => `All Galaxies are ${formatPercents(0.5)} stronger`,
+    description: () => `所有星系增强 ${formatPercents(0.5)}`,
     effect: 1.5
   },
   infinitiedMult: {
     id: "infinitiedMult",
     cost: 1e5,
-    description: "Antimatter Dimensions gain a multiplier based on Infinities",
+    description: "反物质维度获得一个基于无限次数的倍率",
     effect: () => 1 + Currency.infinitiesTotal.value.pLog10() * 10,
     formatEffect: value => formatX(value, 2, 2)
   },
   achievementMult: {
     id: "achievementMult",
     cost: 1e6,
-    description: "Antimatter Dimensions gain a multiplier based on Achievements completed",
+    description: "反物质维度获得一个基于完成成就数量的倍率",
     effect: () => Math.max(Math.pow((Achievements.effectiveCount - 30), 3) / 40, 1),
     formatEffect: value => formatX(value, 2, 2)
   },
   slowestChallengeMult: {
     id: "challengeMult",
     cost: 1e7,
-    description: "Antimatter Dimensions gain a multiplier based on how fast your slowest challenge run is",
+    description: "反物质维度获得一个基于你最慢挑战运行速度的倍率",
     effect: () => Decimal.clampMin(50 / Time.worstChallenge.totalMinutes, 1),
     formatEffect: value => formatX(value, 2, 2),
     hasCap: true,
@@ -73,10 +73,10 @@ export const breakInfinityUpgrades = {
   infinitiedGen: {
     id: "infinitiedGeneration",
     cost: 2e7,
-    description: "Passively generate Infinities based on your fastest Infinity",
+    description: "基于你最快无限被动生成无限次数",
     effect: () => player.records.bestInfinity.time,
     formatEffect: value => {
-      if (value === Number.MAX_VALUE && !Pelle.isDoomed) return "No Infinity generation";
+      if (value === Number.MAX_VALUE && !Pelle.isDoomed) return "无无限生成";
       let infinities = DC.D1;
       infinities = infinities.timesEffectsOf(
         RealityUpgrade(5),
@@ -87,13 +87,13 @@ export const breakInfinityUpgrades = {
       const timeStr = Time.bestInfinity.totalMilliseconds <= 50
         ? `${TimeSpan.fromMilliseconds(100).toStringShort()} (capped)`
         : `${Time.bestInfinity.times(2).toStringShort()}`;
-      return `${quantify("Infinity", infinities)} every ${timeStr}`;
+      return `${quantify("Infinity", infinities)} 每 ${timeStr}`;
     }
   },
   autobuyMaxDimboosts: {
     id: "autobuyMaxDimboosts",
     cost: 5e9,
-    description: "Unlock the buy max Dimension Boost Autobuyer mode"
+    description: "解锁购买最大维度提升自动购买器模式"
   },
   autobuyerSpeed: {
     id: "autoBuyerUpgrade",

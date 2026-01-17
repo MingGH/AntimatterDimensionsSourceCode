@@ -30,8 +30,8 @@ export const dilationUpgrades = {
         ? `${formatX(2 * Effects.product(
           SingularityMilestone.dilatedTimeFromSingularities,
           Achievement(187)
-        ), 2, 2)} Dilated Time gain`
-        : "Double Dilated Time gain"),
+        ), 2, 2)} 膨胀时间获取`
+        : "双倍膨胀时间获取"),
     effect: bought => {
       const base = 2 * Effects.product(
         SingularityMilestone.dilatedTimeFromSingularities,
@@ -53,8 +53,8 @@ export const dilationUpgrades = {
     increment: 100,
     description: () =>
       (Perk.bypassTGReset.isBought && !Pelle.isDoomed
-        ? "Reset Tachyon Galaxies, but lower their threshold"
-        : "Reset Dilated Time and Tachyon Galaxies, but lower their threshold"),
+        ? "重置超光速粒子星系，但降低其阈值"
+        : "重置膨胀时间和超光速粒子星系，但降低其阈值"),
     // The 38th purchase is at 1e80, and is the last purchase.
     effect: bought => (bought < 38 ? Math.pow(0.8, bought) : 0),
     formatEffect: effect => {
@@ -87,7 +87,7 @@ export const dilationUpgrades = {
   doubleGalaxies: {
     id: 4,
     cost: 5e6,
-    description: () => `Gain twice as many Tachyon Galaxies, up to ${formatInt(500)} base Galaxies`,
+    description: () => `获得两倍的超光速粒子星系，最多 ${formatInt(500)} 个基础星系`,
     effect: 2
   },
   tdMultReplicanti: {

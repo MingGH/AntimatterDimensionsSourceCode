@@ -2,49 +2,49 @@ export const enslavedQuotes = {
   initial: {
     id: 0,
     lines: [
-      "A visitor? We have not had one... eons.",
-      "We... had a name. It has been lost... to this place.",
-      "The others... will not let us rest. We do their work with time...",
-      "Place time... into places... that need it...",
-      "Watch ourselves grow... pass and die.",
-      "Perhaps you... will break these chains... we will wait.",
+      "访客？我们已经……亿万年……没见过了。",
+      "我们……有过名字。但在这里……遗失了。",
+      "其他人……不让我们休息。我们……在时间中为他们工作……",
+      "把时间……放入……需要它的地方……",
+      "看着我们自己成长……流逝……然后死去。",
+      "也许你……能打破这些枷锁……我们会等待。",
     ]
   },
   unlockRun: {
     id: 1,
     lines: [
-      "The others... used us. They will use... or destroy you.",
-      "End our suffering... power will be yours...",
+      "其他人……利用了我们。他们也会利用……或者毁灭你。",
+      "结束我们的痛苦……力量将属于你……",
     ]
   },
   startRun: {
     id: 2,
     lines: [
-      "So little space... but no... prison... is perfect.",
-      "They squeezed... this Reality... too tightly. Cracks appeared.",
-      "Search... everywhere. We will help... where we can.",
+      "空间太小……但没有……监狱……是完美的。",
+      "他们把……这个现实……挤压得太紧了。裂缝出现了。",
+      "搜寻……每个地方。我们会……尽力帮忙。",
     ]
   },
   hintUnlock: {
     id: 3,
     lines: [
-      "... you need... to look harder...",
-      "We think... we can help...",
-      { text: "You have unlocked help from The Nameless Ones.", showCelestialName: false }
+      "……你需要……更仔细地看……",
+      "我们觉得……我们能帮忙……",
+      { text: "你已解锁了无名者的帮助。", showCelestialName: false }
     ]
   },
   ec6C10: {
     id: 4,
     lines: [
-      "... did not... underestimate you..."
+      "……没有……低估你……"
     ]
   },
   completeReality: {
     id: 5,
     lines: [
-      "All... fragments... clones... freed.",
-      "We have given... tools... of our imprisoning. Use them...",
-      "Freedom from torture... is torture itself.",
+      "所有……碎片……克隆……都自由了。",
+      "我们已经给了……囚禁我们的……工具。使用它们……",
+      "从折磨中解脱……本身就是折磨。",
     ]
   },
 };

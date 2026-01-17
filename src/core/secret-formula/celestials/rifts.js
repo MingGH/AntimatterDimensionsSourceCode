@@ -5,9 +5,9 @@ export const pelleRifts = {
   vacuum: {
     id: 1,
     key: "vacuum",
-    name: ["Vacuum", "Hollow", "Void"],
-    drainResource: "IP",
-    baseEffect: x => `IP gain ${formatX(x, 2, 2)}`,
+    name: ["真空", "空洞", "虚空"],
+    drainResource: "无限点数",
+    baseEffect: x => `无限点数获取 ${formatX(x, 2, 2)}`,
     additionalEffects: () => [PelleRifts.vacuum.milestones[2]],
     strike: () => PelleStrikes.infinity,
     percentage: totalFill => Math.log10(totalFill.plus(1).log10() * 10 + 1) ** 2.5 / 100,
@@ -28,31 +28,31 @@ export const pelleRifts = {
       {
         resource: "vacuum",
         requirement: 0.04,
-        description: "You can equip a single basic Glyph with decreased level and rarity"
+        description: "你可以装备一个等级和稀有度降低的基础符文"
       },
       {
         resource: "vacuum",
         requirement: 0.06,
-        description: () => `Uncap Replicanti and make its unlock and upgrades ${formatX(1e130)} cheaper`,
+        description: () => `移除复制器上限，并使其解锁和升级便宜 ${formatX(1e130)}`,
         effect: () => 1e130
       },
       {
         resource: "vacuum",
         requirement: 0.4,
-        description: () => `${wordShift.wordCycle(PelleRifts.vacuum.name)} also affects EP gain`,
+        description: () => `${wordShift.wordCycle(PelleRifts.vacuum.name)} 也影响永恒点数获取`,
         effect: () => Decimal.pow(4, PelleRifts.vacuum.totalFill.log10() / 2 / 308 + 3),
-        formatEffect: x => `EP gain ${formatX(x, 2, 2)}`
+        formatEffect: x => `永恒点数获取 ${formatX(x, 2, 2)}`
       },
     ],
-    galaxyGeneratorText: "There is not enough space left for more, you must fill in the $value"
+    galaxyGeneratorText: "没有足够的空间了，你必须填充 $value"
   },
   decay: {
     id: 2,
     key: "decay",
-    name: ["Decay", "Collapse", "Disarray"],
-    drainResource: "Replicanti",
+    name: ["衰变", "坍缩", "混乱"],
+    drainResource: "复制器",
     spendable: true,
-    baseEffect: x => `Replicanti speed ${formatX(x, 2, 2)}`,
+    baseEffect: x => `复制器速度 ${formatX(x, 2, 2)}`,
     additionalEffects: () => [PelleRifts.decay.milestones[0], PelleRifts.decay.milestones[2]],
     strike: () => PelleStrikes.powerGalaxies,
     // 0 - 1
@@ -67,39 +67,39 @@ export const pelleRifts = {
       {
         resource: "decay",
         requirement: 0.2,
-        description: "First rebuyable Pelle upgrade also affects 1st Infinity Dimension",
+        description: "第一个可重复购买的 Pelle 升级也影响第 1 无限维度",
         effect: () => {
           const x = player.celestials.pelle.rebuyables.antimatterDimensionMult;
           return Decimal.pow(1e50, x - 9);
         },
-        formatEffect: x => `1st Infinity Dimension ${formatX(x, 2, 2)}`
+        formatEffect: x => `第 1 无限维度 ${formatX(x, 2, 2)}`
       },
       {
         resource: "decay",
         requirement: 0.6,
-        description: () => `When Replicanti exceeds ${format(DC.E1300)},
-          all Galaxies are ${formatPercents(0.1)} more effective`,
+        description: () => `当复制器超过 ${format(DC.E1300)} 时，
+          所有星系效果增强 ${formatPercents(0.1)}`,
         effect: () => (Replicanti.amount.gt(DC.E1300) ? 1.1 : 1)
       },
       {
         resource: "decay",
         requirement: 1,
-        description: "Increase max Replicanti Galaxies based on total Rift milestones",
+        description: "基于裂隙里程碑总数增加最大复制器星系",
         effect: () => {
           const x = PelleRifts.totalMilestones();
           return x ** 2 - 2 * x;
         },
-        formatEffect: x => `Max RG count +${formatInt(x)}`
+        formatEffect: x => `最大复制器星系数量 +${formatInt(x)}`
       },
     ],
-    galaxyGeneratorText: "There's not enough antimatter to form new Galaxies, you need to reverse the $value"
+    galaxyGeneratorText: "没有足够的反物质来形成新的星系，你需要逆转 $value"
   },
   chaos: {
     id: 3,
     key: "chaos",
-    name: ["Chaos", "Disorder", "Impurity"],
-    drainResource: ["Decay", "Collapse", "Disarray"],
-    baseEffect: x => `Time Dimensions ${formatX(x, 2, 2)}`,
+    name: ["混沌", "无序", "杂质"],
+    drainResource: ["衰变", "坍缩", "混乱"],
+    baseEffect: x => `时间维度 ${formatX(x, 2, 2)}`,
     strike: () => PelleStrikes.eternity,
     percentage: totalFill => totalFill / 10,
     percentageToFill: percentage => 10 * percentage,
@@ -126,27 +126,27 @@ export const pelleRifts = {
         resource: "chaos",
         requirement: 0.09,
         description: () => `${wordShift.wordCycle(PelleRifts.decay.name)} \
-        effect is always maxed and milestones always active`
+        效果总是最大化，里程碑总是激活`
       },
       {
         resource: "chaos",
         requirement: 0.15,
-        description: "Glyphs gain a new Pelle-specific effect",
+        description: "符文获得一个新的 Pelle 特有效果",
       },
       {
         resource: "chaos",
         requirement: 1,
-        description: () => `You gain ${formatPercents(0.01)} of your EP gained on Eternity per second`,
+        description: () => `你每秒获得 ${formatPercents(0.01)} 的永恒时获得的永恒点数`,
       },
     ],
-    galaxyGeneratorText: "Your Galaxies are too fragmented, you must stabilize the $value"
+    galaxyGeneratorText: "你的星系太碎片化了，你必须稳定 $value"
   },
   recursion: {
     id: 4,
     key: "recursion",
-    name: ["Recursion", "Dispersion", "Destruction"],
-    drainResource: "EP",
-    baseEffect: x => `EP formula: log(x)/${formatInt(308)} ➜ log(x)/${formatFloat(308 - x.toNumber(), 2)}`,
+    name: ["递归", "弥散", "毁灭"],
+    drainResource: "永恒点数",
+    baseEffect: x => `永恒点数公式: log(x)/${formatInt(308)} ➜ log(x)/${formatFloat(308 - x.toNumber(), 2)}`,
     additionalEffects: () => [PelleRifts.recursion.milestones[0], PelleRifts.recursion.milestones[1]],
     strike: () => PelleStrikes.ECs,
     percentage: totalFill => totalFill.plus(1).log10() ** 0.4 / 4000 ** 0.4,
@@ -158,32 +158,32 @@ export const pelleRifts = {
       {
         resource: "recursion",
         requirement: 0.10,
-        description: "Dimensional Boosts are more powerful based on EC completions",
+        description: "维度提升基于永恒挑战完成次数变得更强",
         effect: () => Math.max(100 * EternityChallenges.completions ** 2, 1) *
           Math.max(1e4 ** (EternityChallenges.completions - 40), 1),
-        formatEffect: x => `Dimension Boost power ${formatX(x, 2, 2)}`
+        formatEffect: x => `维度提升力量 ${formatX(x, 2, 2)}`
       },
       {
         resource: "recursion",
         requirement: 0.15,
-        description: "Infinity Dimensions are stronger based on EC completions",
+        description: "无限维度基于永恒挑战完成次数变得更强",
         effect: () => Decimal.pow("1e1500", ((EternityChallenges.completions - 25) / 20) ** 1.7).max(1),
-        formatEffect: x => `Infinity Dimensions ${formatX(x)}`
+        formatEffect: x => `无限维度 ${formatX(x)}`
       },
       {
         resource: "recursion",
         requirement: 1,
-        description: "Permanently unlock the Galaxy Generator",
+        description: "永久解锁星系生成器",
       },
     ],
-    galaxyGeneratorText: "Creating more Galaxies is unsustainable, you must focus the $value to allow more"
+    galaxyGeneratorText: "创造更多星系是不可持续的，你必须集中 $value 以允许更多"
   },
   paradox: {
     id: 5,
     key: "paradox",
-    name: ["Paradox", "Contradiction", "Fallacy"],
-    drainResource: "Dilated Time",
-    baseEffect: x => `All Dimensions ${formatPow(x, 2, 3)}`,
+    name: ["悖论", "矛盾", "谬误"],
+    drainResource: "膨胀时间",
+    baseEffect: x => `所有维度 ${formatPow(x, 2, 3)}`,
     additionalEffects: () => [PelleRifts.paradox.milestones[2]],
     strike: () => PelleStrikes.dilation,
     percentage: totalFill => totalFill.plus(1).log10() / 100,
@@ -195,7 +195,7 @@ export const pelleRifts = {
       {
         resource: "paradox",
         requirement: 0.15,
-        description: "Time Dimensions 5-8 are much cheaper, unlock more Dilation upgrades",
+        description: "时间维度 5-8 更便宜，解锁更多膨胀升级",
         // FIXME: Not a great solution
         onStateChange: () => {
           updateTimeDimensionCosts();
@@ -204,20 +204,20 @@ export const pelleRifts = {
       {
         resource: "paradox",
         requirement: 0.25,
-        description: () => `Dilated Time gain becomes Tachyon Particles ${formatPow(1.4, 1, 1)}`,
+        description: () => `膨胀时间获取变成超光速粒子 ${formatPow(1.4, 1, 1)}`,
         effect: 1.4
       },
       {
         resource: "paradox",
         requirement: 0.5,
-        description: "Dilation rebuyable purchase count improves Infinity Power conversion rate",
+        description: "膨胀可重复购买次数提高无限能量转换率",
         effect: () => Math.min(
           1.1075 ** (Object.values(player.dilation.rebuyables).sum() - 60),
           712
         ),
-        formatEffect: x => `Infinity Power Conversion ${formatX(x, 2, 2)}`
+        formatEffect: x => `无限能量转换 ${formatX(x, 2, 2)}`
       },
     ],
-    galaxyGeneratorText: "It should be possible to create more, but Pelle has restricted you. Disregard the $value"
+    galaxyGeneratorText: "应该可以创造更多，但 Pelle 限制了你。无视 $value"
   }
 };
